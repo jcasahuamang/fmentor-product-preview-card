@@ -1,6 +1,6 @@
 body{
     font-family: var(--font-family-montserrat);
-    font-size: 0.875rem;
+    font-size: clamp(var(--font-size-min), 4vw, 0.875rem) ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,9 +13,9 @@ body{
 
 h1{
     font-family: var(--font-family-fraunces);
-    font-size: 1.875rem;
+    font-size: clamp(var(--font-size-min), 5vw,1.875rem) ;
     padding: 0;
-    margin: 0.625rem 0 0.625rem 0;
+    margin: 0.625rem 0;
 }
 h2{
     text-transform: uppercase;
@@ -23,7 +23,7 @@ h2{
 h2,h3,.price-right{
     color: var(--color-neutral-grey);
     font-weight: 500;
-    font-size: 0.875rem;
+    font-size: clamp(var(--font-size-min), 5vw, 0.875rem) ;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -36,6 +36,7 @@ button{
     align-items: center;
     position: relative;
     padding: 0.937rem;
+    margin-block-start: 0.9375rem;
     border-radius: 0.625rem;
     border: none;
     background-color: var(--color-primary-500);
@@ -49,7 +50,7 @@ button:hover,button:active{
 }
 
 button img{
-    margin: 0 0.625rem 0 0.625rem;
+    margin: 0 0.625rem;
 }
 .container{
     display: grid;
@@ -68,9 +69,8 @@ button img{
 
 .picture img{
     max-inline-size: 100%;
-    block-size: auto;
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+    object-position: center;   
 }
 
 .content{
@@ -84,7 +84,7 @@ button img{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 0.937rem 0 0.937rem 0;
+    margin: 0.937rem 0;
     padding: 0;
 
 }
@@ -97,7 +97,7 @@ button img{
 .price .price-left{
     color: var(--color-primary-500);
     font-family: var(--font-family-fraunces);
-    font-size: 1.5rem;
+    font-size: clamp(var(--font-size-min), 5vw, 1.5rem) ;
     font-weight: 900;
 }
 
@@ -105,7 +105,7 @@ button img{
     text-decoration: line-through;
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 23.4375rem){
        body{
             inline-size: 21.875rem;
         }
@@ -115,7 +115,7 @@ button img{
         }
 }
 
-@media screen and (min-width: 376px) and (max-width: 1440px){
+@media screen and (min-width: 23.5rem) and (max-width: 90rem){
         body{
             inline-size: 34.375rem;
         }
@@ -123,7 +123,7 @@ button img{
             grid-template-columns: repeat(2,1fr);
         }
 }
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 90.0625rem){
         body{
             inline-size: 34.375rem;
         }
