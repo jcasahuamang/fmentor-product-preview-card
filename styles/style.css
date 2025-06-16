@@ -1,0 +1,133 @@
+body{
+    font-family: var(--font-family-montserrat);
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 100vh;
+    inline-size: 21.875rem;
+    margin: auto auto;
+    padding: 0;
+    background-color: var(--color-neutral-cream);
+}
+
+h1{
+    font-family: var(--font-family-fraunces);
+    font-size: 1.875rem;
+    padding: 0;
+    margin: 0.625rem 0 0.625rem 0;
+}
+h2{
+    text-transform: uppercase;
+}
+h2,h3,.price-right{
+    color: var(--color-neutral-grey);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0.937rem;
+    border-radius: 0.625rem;
+    border: none;
+    background-color: var(--color-primary-500);
+    color: var(--color-neutral-white);
+    font-weight: 700;
+}
+
+button:hover,button:active{
+    background-color: var(--color-primary-700);
+
+}
+
+button img{
+    margin: 0 0.625rem 0 0.625rem;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    transition: grid-template-columns 0.25s ease-in-out;
+    background-color: var(--color-neutral-white);
+    border-radius: 0.625rem;
+    overflow: hidden;
+    margin: 0.625rem;
+}
+
+.picture{
+    max-inline-size: 100%;
+    display: flex;
+}
+
+.picture img{
+    max-inline-size: 100%;
+    block-size: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 1.125rem;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0.937rem 0 0.937rem 0;
+    padding: 0;
+
+}
+.price p{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.price .price-left{
+    color: var(--color-primary-500);
+    font-family: var(--font-family-fraunces);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.price .price-right{
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 375px){
+       body{
+            inline-size: 21.875rem;
+        }
+
+        .container{
+            grid-template-columns: 1fr;
+        }
+}
+
+@media screen and (min-width: 376px) and (max-width: 1440px){
+        body{
+            inline-size: 34.375rem;
+        }
+        .container{
+            grid-template-columns: repeat(2,1fr);
+        }
+}
+@media screen and (min-width: 1440px){
+        body{
+            inline-size: 34.375rem;
+        }
+        .container{
+            grid-template-columns: repeat(2,1fr);
+        }
+}
